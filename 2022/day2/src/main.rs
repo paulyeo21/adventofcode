@@ -2,7 +2,7 @@ use std::env;
 use std::fs::File;
 use std::io::prelude::*;
 
-use adventofcode2022::{get_fattest, top_three_fattest};
+use day2::{predict, score};
 
 struct Config {
     file_path: String,
@@ -23,6 +23,6 @@ fn main() {
     file.read_to_string(&mut contents)
         .expect("Failed to read to string");
 
-    println!("{}", get_fattest(contents.clone()));
-    println!("{:#?}", top_three_fattest(contents.clone()));
+    println!("{}", score(contents.clone()));
+    println!("{}", predict(contents.clone()));
 }

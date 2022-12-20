@@ -5,11 +5,6 @@ pub fn get_fattest(contents: String) -> i32 {
     let mut current_elf = 0;
 
     for line in contents.split("\n") {
-        // println!(
-        //     "line: {}, fattest: {}, current: {}",
-        //     line, fattest_elf, current_elf
-        // );
-
         let line = line.trim();
 
         if line == "" {
